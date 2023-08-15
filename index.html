@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Menu da Lanchonete</h1>
+    <div class="menu">
+        <button class="add-button" onclick="addItem('cafe', 3.00)">Café - R$3.00</button>
+        <button class="add-button" onclick="addItem('chantily', 1.50)">Chantily - R$1.50</button>
+        <button class="add-button" onclick="addItem('suco', 6.20)">Suco - R$6.20</button>
+        <button class="add-button" onclick="addItem('sanduiche', 6.50)">Sanduíche - R$6.50</button>
+        <button class="add-button" onclick="addItem('queijo', 2.00)">Queijo - R$2.00</button>
+        <button class="add-button" onclick="addItem('salgado', 7.25)">Salgado - R$7.25</button>
+        <button class="add-button" onclick="addItem('combo1', 9.50)">Combo 1 - R$9.50</button>
+        <button class="add-button" onclick="addItem('combo2', 7.50)">Combo 2 - R$7.50</button>
+    </div>
+    
+    <div class="selected-items">
+        <h2>Itens Selecionados</h2>
+        <ul id="selected-items-list">
+            <!-- Itens selecionados serão exibidos aqui -->
+        </ul>
+    </div>
+    
+    <div class="total">
+        <p>Total: R$<span id="total-amount">0.00</span></p>
+        <input type="number" id="discount" placeholder="Desconto">
+        <button id="checkout-button" onclick="calculateTotal()">Finalizar Compra</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
